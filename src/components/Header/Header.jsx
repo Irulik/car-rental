@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -8,22 +9,22 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a 
+              <NavLink 
               className="nav-link text-white" 
               aria-current="page" 
-              href="/">
+              to="/">
                 Home
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/catalog">
-                Cataolog
-              </a>
+              <NavLink className="nav-link text-white" to="/catalog">
+                Catalog
+              </NavLink>
             </li>
             <li className="nav-item">
-               <a className="nav-link" href="/favorites">
+               <NavLink className="nav-link text-white" to="/favorites">
                 Favorites
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
