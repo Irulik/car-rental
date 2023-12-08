@@ -1,26 +1,44 @@
-import React from 'react'
-import { Form, InputWrap, ButtonSearch } from './Filters.styled'
+import React from 'react';
+import Select from 'react-select';
+import { ButtonSearch, Form, Input, InputWrap, Label, FalseInput, WrapSecondInput } from "./Filters.styled";
 
 const Filters = () => {
-    return (
-        <>
-        <Form>
+  return (
+    <Form>
+      <Label>
+        Car brand
+        <Select />
+      </Label>
 
-        </Form>
-        <InputWrap>
-                <label>
+      <Label>
+        Price/ 1 hour
+        <Select />
+      </Label>
 
-                </label>
-            
-        </InputWrap>
+      <Label>
+        <FalseInput $left='18px'>To</FalseInput>
+        <FalseInput $left='75px'>$</FalseInput>
+      </Label>
 
-        <ButtonSearch type="button" width='80px'>
-            Reset    
-        </ButtonSearch>
+      <InputWrap>
+        <Label>
+          Car mileage / km
+          <Input type="number" />
+          <span></span>
+          <FalseInput>From</FalseInput>
+        </Label>
 
-            <ButtonSearch type="button">Search</ButtonSearch>
-        </>
-    )
-}
+        <WrapSecondInput>
+          <Input type="number" />
+          <span></span>
+          <FalseInput>To</FalseInput>
+        </WrapSecondInput>
+      </InputWrap>
+
+      <ButtonSearch>Reset</ButtonSearch>
+      <ButtonSearch>Search</ButtonSearch>
+    </Form>
+  );
+};
 
 export default Filters;

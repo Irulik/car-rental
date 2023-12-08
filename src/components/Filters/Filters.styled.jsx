@@ -7,12 +7,12 @@ export const Form = styled.form`
     flex-wrap: wrap;
     justify-content: center;
 
-  /* @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     gap: 16px;
   }
 
   @media screen and (min-width: 1440px) {
-    gap: 18px; */
+    gap: 18px;
   }
 `;
 
@@ -34,8 +34,11 @@ export const InputWrap = styled.div`
 export const Input = styled.input`
   width: 160px;
   height: 48px;
+  padding: ${props => props.$padding || '14px 14px 14px 70px'};
   margin-top: 8px;
+  border-radius: ${props => props.$radius || '14px'};
   border: none;
+  border-right: ${props => props.$border || 'none'};
   background-color: var(--color-filter-field);
   color: transparent;
   font-size: 18px;
@@ -59,8 +62,25 @@ export const Input = styled.input`
 }
 `;
 
+export const FalseInput = styled.div`
+  display: flex;
+  color: var(--color-text-main);
+  position: absolute;
+  bottom: 14px;
+  left: ${props => props.$left || '24px'};
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.1;
+`;
+
+
+export const WrapSecondInput = styled.div`
+  position: relative;
+`;
+
 export const ButtonSearch = styled.button`
   display: flex;
+  width: ${props => props.width || '136px'};
   height: 48px;
   padding: 14px;
   justify-content: center;

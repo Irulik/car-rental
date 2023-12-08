@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 export const MainSection = styled.section`
   text-align: center;
-  padding: 50px 0;
+  padding: 20px 0;
 `;
 
 export const Title = styled.h1`
   font-size: 36px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: var(--color-text-main);
 `;
 
