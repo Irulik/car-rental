@@ -78,7 +78,6 @@ export const Img = styled.img`
   }
 `;
 
-
 export const Button = styled.button`
   display: flex;
   width: ${props => props.width || '100%'};
@@ -98,4 +97,3 @@ export const Button = styled.button`
     background: var(--color-button-hover);
   }
 `;
-

@@ -6,8 +6,6 @@ const Header = () => {
     color: "black",   
   };
 
-  
-
   return (
     <nav className="navbar navbar-expand-lg navbar-light mb-3" style={headerStyle}>
       <div className="container-fluid">
@@ -48,7 +46,7 @@ const Header = () => {
             </li>
           </ul>
           </div>
-          <hr style={{ margin: "0" }} /> {/* Лінія hr */}
+          <hr style={{ margin: "10px 0" }} /> {/* Лінія hr */}
           </div>
       </div>
     </nav>
