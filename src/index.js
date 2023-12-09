@@ -7,8 +7,7 @@ import './index.css';
 const root = createRoot(document.getElementById('root'));
 
 root.render(
-    <BrowserRouter>  
+    <BrowserRouter basename="/car-rental">  
         <App />
     </BrowserRouter>
 );
-//basename="/car-rental" додати 
