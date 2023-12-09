@@ -1,39 +1,20 @@
-import React from 'react'
-import {Button} from "./CarItem.styled";
-
- 
+import { Button, Car_card } from "./CarItem.styled";
+import React from 'react';
 
 const CarItem = ({ car }) => {
-    
-    
-    const {
-        id,
-        make,
-        model,
-        year,
-        img,
-        rentalPrice,
-        rentalCompany,
-        type,
-        functionalities,
-        address,
-        description
-    } = car;
-
     return (
-        <li className='Car_card'>
+        <Car_card>
             <div className='Car_card_div'>
-                <img src={img} alt={`${make} ${model}`} className='car_img' />
+                <img src={car.img} alt={`${car.make} ${car.model}`} className='car_img' />
             </div>
             <div>
-                <h3 className='car_title'>{`${make} ${model}, ${year}`}</h3>
-                <p className='car_text'>{address}</p>
-                <p className='car_text'>{description}</p>
-                <p className='car_text'>{`Rental Price: ${rentalPrice}`}</p>
-                <Button>Learn more</Button> 
+                <h3 className='car_title'>{`${car.make} ${car.model}, ${car.year}`}</h3>
+                <p className='car_text'>{`${car.address} | ${car.make} | ${car.model} |${car.year} | ${car.type} | ${car.rentalCompany} | ${car.type} | ${car.functionalities}`}</p>
+                {/* <p className='car_text'>{`Rental Price: ${car.rentalPrice}`}</p> */}
+                <Button>Learn more</Button>
             </div>
-        </li>
+        </Car_card>
     );
-}
+};
 
 export default CarItem;

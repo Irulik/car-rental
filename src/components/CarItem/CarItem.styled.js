@@ -1,14 +1,8 @@
 import styled from 'styled-components';
 
 export const Car_card = styled.li`
-  display: flex;
-  width: 100%;
-  width: 150px;
   flex-basis: calc((100% - 1*16px) / 2);
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 16px;
+  position: relative;
 
   @media screen and (min-width: 768px) {
     flex-basis: calc((100% - 2*20px) / 3);
@@ -21,6 +15,28 @@ export const Car_card = styled.li`
     height: 426px;
     gap: 28px;
     flex-basis: calc((100% - 3*29px) / 4);
+  }
+  .Car_card_div{
+    margin-bottom: 14px;
+  }
+  img{
+    width:100%;
+    height: 268px;
+    object-fit: cover;
+    background: linear-gradient(180deg, rgba(18, 20, 23, 0.50) 2.5%, rgba(18, 20, 23, 0.00) 41.07%), #F3F3F2;
+    border-radius: 14px;
+  }
+  h3{
+    font-size: 16px;
+  }
+  button{
+    position: absolute;
+    bottom: 0;
+  }
+  p{
+    opacity: 50%;
+    height: 40px;
+    overflow: hidden;
   }
 `;
 
@@ -77,6 +93,7 @@ export const Img = styled.img`
     height: 268px;
   }
 `;
+
 
 export const Button = styled.button`
   display: flex;

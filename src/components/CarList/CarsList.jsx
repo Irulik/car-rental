@@ -21,16 +21,14 @@ const CarsList = () => {
 
   return (
     <>
-      <main className='section'>
         <div className='container'>
-          <ul className={CardsStyle}>
+          <CardsStyle>
             {cars.map((car) => (
-               <CarItem key={car.id} car={car} />
+              <CarItem key={car.id} car={car} />
             ))}
-          </ul>
+          </CardsStyle>
         </div>
         <LoadMore>Load more</LoadMore>
-      </main>
     </>
   );
 };
