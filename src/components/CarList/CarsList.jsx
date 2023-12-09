@@ -3,7 +3,8 @@ import { CardsStyle, LoadMore } from './CarsList.styled';
 import CarItem from '../CarItem/CarItem';
 import { fetchCars } from '../api/fetchCars';
 
-const CarsList = () => {
+
+const CarsList = () => { 
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
@@ -18,6 +19,7 @@ const CarsList = () => {
 
     fetchData();
   }, []);
+
 
   return (
     <>
