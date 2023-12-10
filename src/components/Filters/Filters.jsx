@@ -65,9 +65,7 @@ const carBrandsOptions = [
       </Label>
 
       <InputWrap>
-        <Label>
-          Car mileage / km
-          <Input type="number" />
+        <Label>Car mileage / km<Input type="number" />
           <span></span>
           <FalseInput>From</FalseInput>
         </Label>

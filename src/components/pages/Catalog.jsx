@@ -4,7 +4,6 @@ import Filters from "../Filters/Filters";
 import { Container, Section } from "./Page.styled";
 
  
-
 const Catalog = () => {
 
   return (
