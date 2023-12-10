@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const HeartIconWrapper = styled.div`
   svg {
-    transition: 0.4s;
+    fill: ${({ isFavorite }) => (isFavorite ? 'blue' : 'black')};  
+    cursor: pointer;  
   }
 `;
