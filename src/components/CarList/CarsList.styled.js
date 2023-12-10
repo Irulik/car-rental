@@ -24,10 +24,10 @@ export const LoadMore = styled.p`
   font-size: 16px;
   font-weight: 500;
   text-decoration-line: underline;
-  margin: 0 auto;
+  margin: 10px auto 50px; 
   padding: 15px;
   cursor: pointer;
-
+  text-align: center; 
   &:hover,
   &:focus {
     color: var(--color-text-loadmore-hover);

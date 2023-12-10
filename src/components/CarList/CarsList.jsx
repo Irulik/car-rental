@@ -4,8 +4,9 @@ import CarItem from '../CarItem/CarItem';
 import { fetchCars } from '../api/fetchCars';
 
 
-const CarsList = () => { 
+const CarsList = () => {
   const [cars, setCars] = useState([]);
+  const [visibleItems, setVisibleItems] = useState(12);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,17 +21,20 @@ const CarsList = () => {
     fetchData();
   }, []);
 
+  const loadMoreItems = () => {
+    setVisibleItems((prevVisibleItems) => prevVisibleItems + 12);
+  };
 
   return (
     <>
-        <div className='container'>
-          <CardsStyle>
-            {cars.map((car) => (
-              <CarItem key={car.id} car={car} />
-            ))}
-          </CardsStyle>
-        </div>
-        <LoadMore>Load more</LoadMore>
+      <div className="container">
+        <CardsStyle>
+          {cars.slice(0, visibleItems).map((car) => (
+            <CarItem key={car.id} car={car} />
+          ))}
+        </CardsStyle>
+      </div>
+      {visibleItems < cars.length && <LoadMore onClick={loadMoreItems}>Load more</LoadMore>}
     </>
   );
 };
