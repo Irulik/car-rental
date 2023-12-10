@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-// import sprite from "../../images/icons/heart.svg";
 
 export const Car_card = styled.li`
-  flex-basis: calc((100% - 1*16px) / 2);
   position: relative;
-
+  flex-basis: calc((100% - 1*16px) / 2);
+  
   @media screen and (min-width: 768px) {
     flex-basis: calc((100% - 2*20px) / 3);
     gap: 20px;
@@ -17,84 +16,41 @@ export const Car_card = styled.li`
     gap: 28px;
     flex-basis: calc((100% - 3*29px) / 4);
   }
-  .Car_card_div{
+
+  .Car_card_div {
+    position: relative;
     margin-bottom: 14px;
   }
-  img{
-    width:100%;
+
+  .svg {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+  }
+
+  img {
+    width: 100%;
     height: 268px;
     object-fit: cover;
     background: linear-gradient(180deg, rgba(18, 20, 23, 0.50) 2.5%, rgba(18, 20, 23, 0.00) 41.07%), #F3F3F2;
     border-radius: 14px;
   }
-  h3{
+
+  h3 {
     font-size: 16px;
   }
-  button{
+
+  button {
     position: absolute;
     bottom: 0;
   }
-  p{
+
+  p {
     opacity: 50%;
     height: 40px;
     overflow: hidden;
   }
 `;
-
-// export const Car_card_div = styled.div`
-//   display: flex;
-//   width: 100%;
-//   flex-direction: column;
-//   align-items: flex-start;
-//   justify-content: space-between;
-//   gap: 8px;
-
-//   @media screen and (min-width: 768px) {
-//     gap: 10px;
-//   }
-
-//   @media screen and (min-width: 1440px) {
-//     height: 354px;
-//     gap: 14px;
-//   }
-// `;
-
-// export const ImgWrap = styled.div`
-//   position: relative;
-//   display: block;
-//   overflow: hidden;  
-//   width: 100%;
-//   height: 146px;
-//   object-fit: cover;
-//   border-radius: 14px;
-
-//   @media screen and (min-width: 768px) {
-//     height: 204px;
-//   }
-
-//   @media screen and (min-width: 1440px) {
-//     height: 268px;
-//   }
-// `;
-
-export const Img = styled.img`
-  position: absolute;
-  top: 0;
-  right: -37px;
-  height: 146px;
-  background: linear-gradient(180deg, rgba(18, 20, 23, 0.50) 2.5%, rgba(18, 20, 23, 0.00) 41.07%), #F3F3F2;
-
-  @media screen and (min-width: 768px) {
-    height: 204px;
-    right: -50px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    right: -65px;
-    height: 268px;
-  }
-`;
-
 
 export const Button = styled.button`
   display: flex;
@@ -115,4 +71,3 @@ export const Button = styled.button`
     background: var(--color-button-hover);
   }
 `;
-
