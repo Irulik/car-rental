@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
+// import React from 'react';
 import Select from 'react-select';
 import { ButtonSearch, Form, Input, InputWrap, Label, FalseInput, WrapSecondInput } from "./Filters.styled";
 import { useDispatch } from 'react-redux';
-import { setCarBrandFilter } from '../../redux/filter/filterSlice';
+import { setCarBrandFilter, setPriceFilter } from '../../redux/filter/filterSlice';
 
 const Filters = () => {
   const dispatch = useDispatch();
+   const [selectedPrice, setSelectedPrice] = useState(null);
 
   const handleCarBrandChange = (selectedOption) => {
     dispatch(setCarBrandFilter(selectedOption.value));
   };
+
+  const handlePriceChange = (selectedOption) => {
+    setSelectedPrice(selectedOption);
+    dispatch(setPriceFilter(selectedOption?.value));
+  };
+
+  const priceOptions = Array.from({ length: 10 }, (_, index) => {
+    const price = (index + 1) * 10;
+    return { value: price, label: `$${price}` };
+  });
 
 const carBrandsOptions = [
   { value: 'Buick', label: 'Buick' },
@@ -44,7 +56,7 @@ const carBrandsOptions = [
 
       <Label>
         Price/ 1 hour
-        <Select />
+        <Select value={selectedPrice} onChange={handlePriceChange} options={priceOptions} />
       </Label>
 
       <Label>
