@@ -1,18 +1,30 @@
 import { configureStore } from '@reduxjs/toolkit';
+import { carsReducer } from './car/carSlice'; 
+import { favoriteCarsPersistReducer } from './fovoriteCarsSlice/favoriteCarsSlice';
+import {
+    persistStore,
+    FLUSH,
+    REHYDRATE,
+    PAUSE,
+    PERSIST,
+    PURGE,
+    REGISTER,
+} from 'redux-persist';
+import { filterReducer } from './filter/filterSlice';
 
-const initialState = {
-  filter: null,
-};
 
-const myReducer = (state = initialState, action) => {
-  // Логіка обробки дій тут
-  return state;
-};
-
-const store = configureStore({
-  reducer: {
-    myValue: myReducer,
-  },
+export const store = configureStore({
+    reducer: {
+        cars: carsReducer,
+        favoriteCars: favoriteCarsPersistReducer,
+        filter: filterReducer,
+    },
+    middleware: getDefaultMiddleware =>
+        getDefaultMiddleware({
+            serializableCheck: {
+                ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+            },
+        }),
 });
 
-export default store;
+export const persistor = persistStore(store);

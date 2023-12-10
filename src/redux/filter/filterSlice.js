@@ -12,9 +12,9 @@ export const filterSlice = createSlice({
     setCarBrandFilter: (state, action) => {
       state.carBrand = action.payload;
     },
-  
   },
 });
 
 export const { setCarBrandFilter } = filterSlice.actions;
+export const filterReducer = filterSlice.reducer;
 export default filterSlice.reducer;

@@ -1,4 +1,4 @@
-import { CreateSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 const carsInitialState = {
     cars: [],
@@ -8,9 +8,13 @@ const carsInitialState = {
     error: null,
 };
 
-export const carsSlice = CreateSlice({
+export const carSlice = createSlice({
     name: 'cars',
     initialState: carsInitialState,
-    reducers: {}
-    
+    reducers: {
+     
+    }
 });
+
+
+export const carsReducer = carSlice.reducer;

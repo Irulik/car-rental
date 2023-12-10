@@ -5,7 +5,7 @@ const CarItem = ({ car }) => {
     return (
         <Car_card>
             <div className='Car_card_div'>
-                <img src={car.img} alt={`${car.make} ${car.model}`} className='car_img' />
+                <img src={car.img} alt={`${car.make} ${car.model}`} className='car_img' />               
             </div>
             <div>
                 <h3 className='car_title'>{`${car.make} ${car.model}, ${car.year}`}</h3>

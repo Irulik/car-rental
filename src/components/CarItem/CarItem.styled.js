@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+// import sprite from "../../images/icons/heart.svg";
 
 export const Car_card = styled.li`
   flex-basis: calc((100% - 1*16px) / 2);
@@ -114,3 +115,4 @@ export const Button = styled.button`
     background: var(--color-button-hover);
   }
 `;
+
