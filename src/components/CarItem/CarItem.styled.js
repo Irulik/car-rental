@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Car_card = styled.li`
+export const CarCard = styled.li`
   position: relative;
   flex-basis: calc((100% - 1*16px) / 2);
   
@@ -34,6 +34,11 @@ export const Car_card = styled.li`
     object-fit: cover;
     background: linear-gradient(180deg, rgba(18, 20, 23, 0.50) 2.5%, rgba(18, 20, 23, 0.00) 41.07%), #F3F3F2;
     border-radius: 14px;
+  }
+
+  .Car_desc {
+    margin-top: 14px;
+    margin-bottom: 8px;
   }
 
   h3 {

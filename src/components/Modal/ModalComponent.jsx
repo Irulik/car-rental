@@ -12,9 +12,9 @@ import {
   ConditionsList,
   ConditionsItem,
   ModalCloseButton,
-} from './Modal.styled';
+} from './ModalComponent.styled';
 
-const ModalComponent = ({ isOpen, onClose, children }) => {
+const ModalComponent = ({ isOpen, onClose }) => {
   return (
     <>
       {isOpen && (       
@@ -24,10 +24,10 @@ const ModalComponent = ({ isOpen, onClose, children }) => {
             </ModalImgWrap>
             <ModalDescriptionWrap>
               <Block>
-                <ModalCloseButton onClick={() => onClose()}>
+                 <ModalCloseButton onClick={onClose}>
                   <IconClose />
                 </ModalCloseButton>
-                {children}
+                {/* {children} */}
                 <ModalTitleH3 />
                 <Description />
                 <ModalTitleH4 />
@@ -43,3 +43,4 @@ const ModalComponent = ({ isOpen, onClose, children }) => {
 };
 
 export default ModalComponent;
+
